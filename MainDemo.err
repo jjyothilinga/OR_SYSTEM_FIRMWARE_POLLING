@@ -1,0 +1,5 @@
+Warning[2066] D:\jo\Ideonics\Repository\OR_SYSTEM_FIRMWARE_POLLING\TCPIP\MainDemo.c 274 : type qualifier mismatch in assignment
+Warning[2066] D:\jo\Ideonics\Repository\OR_SYSTEM_FIRMWARE_POLLING\TCPIP\MainDemo.c 280 : type qualifier mismatch in assignment
+Warning[2066] D:\jo\Ideonics\Repository\OR_SYSTEM_FIRMWARE_POLLING\TCPIP\MainDemo.c 518 : type qualifier mismatch in assignment
+Warning[2066] D:\jo\Ideonics\Repository\OR_SYSTEM_FIRMWARE_POLLING\TCPIP\MainDemo.c 577 : type qualifier mismatch in assignment
+Warning[2064] D:\jo\Ideonics\Repository\OR_SYSTEM_FIRMWARE_POLLING\TCPIP\MainDemo.c 681 : static function 'ProcessIO' not defined
