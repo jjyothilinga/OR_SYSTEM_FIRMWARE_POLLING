@@ -58,9 +58,10 @@
 
 #include "TCPIP Stack/TCPIP.h"
 #include "linearkeypad.h"
+#include "BerkeleyAPI.h"
 
 #define PORTNUM 9764 
-#define MAX_CLIENT (8) // Maximum number of simultanous connections accepted by the server.
+#define MAX_CLIENT (BSD_SOCKET_COUNT - 1) // Maximum number of simultanous connections accepted by the server.
 
 
 	
@@ -153,6 +154,10 @@ void BerkeleyTCPServerDemo(void)
       case BSD_OPERATION:
             for(i=0; i<MAX_CLIENT; i++)
             {
+
+				if(HandlePossibleTCPDisconnection(BSDServer.ClientSock[i]))
+					BSDServer.ClientSock[i] = INVALID_SOCKET;
+
 	            // Accept any pending connection requests, assuming we have a place to store the socket descriptor
                 if(BSDServer.ClientSock[i] == INVALID_SOCKET)
                     BSDServer.ClientSock[i] = accept(BSDServer.Socket, (struct sockaddr*)&addRemote, &addrlen);
@@ -166,14 +171,6 @@ void BerkeleyTCPServerDemo(void)
                	if( length > 0 )
                	{			
 				//	LED0_IO ^= 1;
-					k++;
-
-					if( k >= 2 )
-					{
-						for( j = 1; j < MAX_CLIENT; j++ )
-							BSDServer.ClientSock[j] = INVALID_SOCKET;
-						k = 0;
-					}
 
 	                if( LinearKeyPad_getKeyState(bfr[0]) == KEY_PRESSED )
 				    {
@@ -186,10 +183,9 @@ void BerkeleyTCPServerDemo(void)
 						send(BSDServer.ClientSock[i], &result, 1, 0);
 					}
 
-
-//					send(BSDServer.ClientSock[i], bfr, length, 0);
 					for( j = 0; j < length; j++ )
 						WriteUSART( bfr[j] );
+
 	            }
 
 				

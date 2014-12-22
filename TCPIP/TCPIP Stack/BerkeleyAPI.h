@@ -142,6 +142,7 @@ int recv( SOCKET s, char* buf, int len, int flags );
 int recvfrom( SOCKET s, char* buf, int len, int flags, struct sockaddr* from, int* fromlen );
 int gethostname(char* name, int namelen);
 int closesocket( SOCKET s );
+BOOL HandlePossibleTCPDisconnection(SOCKET s);
 
 #endif
 

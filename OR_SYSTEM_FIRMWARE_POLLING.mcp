@@ -108,6 +108,8 @@ file_080=TCPIP
 file_081=TCPIP
 file_082=TCPIP
 file_083=TCPIP
+file_084=TCPIP
+file_085=.
 [GENERATED_FILES]
 file_000=no
 file_001=no
@@ -193,6 +195,8 @@ file_080=no
 file_081=no
 file_082=no
 file_083=no
+file_084=no
+file_085=no
 [OTHER_FILES]
 file_000=no
 file_001=no
@@ -278,6 +282,8 @@ file_080=no
 file_081=no
 file_082=no
 file_083=no
+file_084=no
+file_085=no
 [FILE_INFO]
 file_000=TCPIP\source\Announce.c
 file_001=TCPIP\source\ARP.c
@@ -363,6 +369,8 @@ file_080=TCPIP\TCPIP Stack\UDPPerformanceTest.h
 file_081=TCPIP\TCPIP Stack\XEEPROM.h
 file_082=TCPIP\configs\TCPIP ETH97.h
 file_083=TCPIP\configs\HWP PICDN2_ETH97.h
+file_084=TCPIP\TCPIP Stack\TCP.h
+file_085=18f67j60.lkr
 [SUITE_INFO]
 suite_guid={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
 suite_state=

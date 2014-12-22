@@ -54,14 +54,14 @@
 
 #include "TCPIP Stack/TCPIP.h"
 
-static BOOL HandlePossibleTCPDisconnection(SOCKET s);
+BOOL HandlePossibleTCPDisconnection(SOCKET s);
 
 
 #if defined(__18CXX) && !defined(HI_TECH_C)	
 	#pragma udata BSD_uRAM
 #endif
 // Array of BSDSocket elements; used to track all socket state and connection information.
-static struct BSDSocket  BSDSocketArray[BSD_SOCKET_COUNT];
+struct BSDSocket  BSDSocketArray[BSD_SOCKET_COUNT];
 #if defined(__18CXX) && !defined(HI_TECH_C)	
 	#pragma udata
 #endif
@@ -1043,7 +1043,7 @@ int closesocket( SOCKET s )
 	FALSE - Socket is 
 
   ***************************************************************************/
-static BOOL HandlePossibleTCPDisconnection(SOCKET s)
+BOOL HandlePossibleTCPDisconnection(SOCKET s)
 {
 	struct BSDSocket *socket;
 	BYTE i;

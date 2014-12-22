@@ -153,7 +153,7 @@
 
 #define MY_DEFAULT_MAC_BYTE1            (0x00)	// Use the default of 00-04-A3-00-00-00
 #define MY_DEFAULT_MAC_BYTE2            (0x04)	// if using an ENCX24J600, MRF24WB0M, or
-#define MY_DEFAULT_MAC_BYTE3            (0xA7)	// PIC32MX6XX/7XX internal Ethernet 
+#define MY_DEFAULT_MAC_BYTE3            (0xA6)	// PIC32MX6XX/7XX internal Ethernet 
 #define MY_DEFAULT_MAC_BYTE4            (0x00)	// controller and wish to use the 
 #define MY_DEFAULT_MAC_BYTE5            (0x00)	// internal factory programmed MAC
 #define MY_DEFAULT_MAC_BYTE6            (0x00)	// address instead.
@@ -161,7 +161,7 @@
 #define MY_DEFAULT_IP_ADDR_BYTE1        (192ul)
 #define MY_DEFAULT_IP_ADDR_BYTE2        (168ul)
 #define MY_DEFAULT_IP_ADDR_BYTE3        (253ul)
-#define MY_DEFAULT_IP_ADDR_BYTE4        (177ul)
+#define MY_DEFAULT_IP_ADDR_BYTE4        (176ul)
 
 #define MY_DEFAULT_MASK_BYTE1           (255ul)
 #define MY_DEFAULT_MASK_BYTE2           (255ul)
@@ -322,7 +322,7 @@
  *   Berkeley Sockets are disabled.  Set this value as low as your application
  *   requires to avoid waisting RAM.
  */
-#define BSD_SOCKET_COUNT (9u)
+#define BSD_SOCKET_COUNT (8u)
 
 
 // =======================================================================
